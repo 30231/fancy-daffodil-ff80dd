@@ -36,10 +36,35 @@ renderParameters.domains
 
 renderParameters.resourceLocations
 =
-{
-   "proof.am/#rsx": {url:"https://x.com/rustysand7x",description:"🐦Rusty Sand"}
-    ,"proof.am/#30231": {url:"https://github.com/30231",description:"Amazing repositories coming soon..."}
-   ,"notfake.id/#resume": {url:"https://notfake.id/#resume",description:"I have the following experience..."}
-    , "proof.am/#rustysan": {url:"mailto:rustysan@amazon.com",description:"I'm the owner of this email address. I will send you a verification email from this address upon request."}
-    , "proof.am/#gatech": {url:"mailto:easyproof@gatech.edu",description:"If you send an email to this address, I will reply from jspinoza3@gatech.edu"}
-};
+[
+    {
+       metaURL: "notfake.id"
+       , url:"https://notfake.id"
+       , description: "On discord under the username: notfake.id"
+    }
+    {
+       metaURL: "proof.am/#rsx"
+       , url:"https://x.com/rustysand7x"
+       , description:"🐦Rusty Sand"
+    }
+    ,{
+        metaURL: "proof.am/#30231"
+        , url:"https://github.com/30231"
+        , description:"Amazing repositories coming soon..."
+    }
+    ,{
+       metaURL: "notfake.id/#resume"
+       , url:"https://notfake.id/#resume"
+       , description:"I have the following experience..."
+    }
+    ,{
+        metaURL: "proof.am/#rustysan"
+        , url:"mailto:rustysan@amazon.com"
+        , description:"I'm the owner of this email address. I will send you a verification email from this address upon request."
+    }
+    ,{
+        metaURL: "proof.am/#gatech"
+        , url:"mailto:easyproof@gatech.edu"
+        , description:"If you send an email to this address, I will reply from jspinoza3@gatech.edu"
+    }
+];
