@@ -263,8 +263,6 @@ center.appendChild(goodbye);
 const resourceRenderer
 =
 {
-
-
    rendered : {}
   ,render(metaurl,resource,highlight)
   {
@@ -275,14 +273,25 @@ const resourceRenderer
       var div = document.createElement("div");
       resourcesdiv.appendChild(div);
       createElementWithTag_Text_andAppendTo_("p",metaurl,div).className="metaurl";
-      var span = createLinkWithURL_Tag_Parent_withText_(url,"span",div,url);
+      var span = document.createElement("span");
       span.className = "resourcelinkwrappingspan";
-      span.firstChild.className = "resourcelink";
+      if (resource.nonclickable)
+      {
+        span.textContent = url;
+      }
+      else
+      {
+        var a = document.createElement("a");
+        a.href = url;
+        a.innerText = url;
+        a.className = "resourcelink";
+        span.appendChild(a);
+      }
+      div.appendChild(span);
       div.className = Object.keys(this.rendered).length%2?"resourcelisting1":"resourcelisting0";
       if(highlight)
         div.classList.add("my-class");
       createElementWithTag_Text_andAppendTo_("p",resource.description||"",div).className="description";
-
     }
   }
 };
