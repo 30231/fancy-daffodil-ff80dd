@@ -39,7 +39,7 @@ renderParameters.resourceLocations
 [
     {
        metaURL: "notfake.id"
-       , url:"https://notfake.id"
+       , url:""
        , description: "On discord under the username: notfake.id"
     }
     ,{
