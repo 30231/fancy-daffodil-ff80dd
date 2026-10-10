@@ -217,10 +217,10 @@ var here = addressBar();
 var matches = [];
 var sameDomain = [];
 var otherDomain = [];
-for (var key in renderParameters.resourceLocations)
+for (var item of renderParameters.resourceLocations)
 {
-    var parsed = parseMetaurl(key);
-    var entry = { metaurl: key, resource: renderParameters.resourceLocations[key], parsed: parsed };
+    var parsed = parseMetaurl(item.metaURL);
+    var entry = { metaurl: item.metaURL, resource: item, parsed: parsed };
     if (parsed.domain === here.domain && parsed.tag === here.tag)
         matches.push(entry);
     else if (parsed.domain === here.domain)
