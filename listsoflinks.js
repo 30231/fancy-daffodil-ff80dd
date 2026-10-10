@@ -42,7 +42,7 @@ renderParameters.resourceLocations
        , url:"https://notfake.id"
        , description: "On discord under the username: notfake.id"
     }
-    {
+    ,{
        metaURL: "proof.am/#rsx"
        , url:"https://x.com/rustysand7x"
        , description:"🐦Rusty Sand"
