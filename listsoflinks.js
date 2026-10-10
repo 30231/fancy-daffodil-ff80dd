@@ -46,7 +46,7 @@ renderParameters.resourceLocations
     ,{
        metaURL: "proof.am/#rsx"
        , url:"https://x.com/rustysand7x"
-       , description:"🐦Rusty Sand"
+       , description:"🐦"
     }
     ,{
         metaURL: "proof.am/#30231"
