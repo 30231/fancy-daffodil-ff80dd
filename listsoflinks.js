@@ -18,7 +18,7 @@ function (numberOfMatches)
         )
         + " particularly useful."
     );
-};//...you may find the first link particularly useful."
+};//...you may find the first pointer particularly useful."
 renderParameters.maindomains
 =
 [
