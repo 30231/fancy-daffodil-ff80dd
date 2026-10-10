@@ -269,7 +269,7 @@ const resourceRenderer
   ,render(metaurl,resource,highlight)
   {
     var url = resource.url
-    if (!this.rendered[url])
+    if (!this.rendered[url] || !url)
     {
       this.rendered[url]=true;
       var div = document.createElement("div");
