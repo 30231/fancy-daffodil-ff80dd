@@ -39,8 +39,9 @@ renderParameters.resourceLocations
 [
     {
        metaURL: "notfake.id"
-       , url:""
-       , description: "On Discord under the username: notfake.id"
+       , url:"On Discord under the username: notfake.id"
+       ,nonclickable: true
+       , description: ""
     }
     ,{
        metaURL: "proof.am/#rsx"
@@ -55,6 +56,7 @@ renderParameters.resourceLocations
     ,{
        metaURL: "notfake.id/#resume"
        , url:""
+       ,nonclickable: true
        , description:"Digital CV coming soon..."
     }
     ,{
