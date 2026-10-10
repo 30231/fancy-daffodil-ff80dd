@@ -1,7 +1,7 @@
 const renderParameters = {};
 renderParameters.title = "Footprint Coherence Via Circular Links.";
-renderParameters.greeting = "Just because someone sent you here, doesn't mean they are me. Below are links to stuff I created or manage.";
-renderParameters.conclusion = "But don't take my word for it. Follow a link and see if that page also refers you back here.";
+renderParameters.greeting = "Just because someone sent you here, doesn't mean they are me. Below are links and or directions for finding stuff I created or manage.";
+renderParameters.conclusion = "But don't take my word for it. Follow a pointer below and see if the thing it references also refers you back here.";
 renderParameters.goodbye = "Similar lists are accessible through the following domains under my control. But don't take my word for it:";
 renderParameters.tagFoundSmallText = "";//"The URL in your address bar includes extra information suggesting that...";
 renderParameters.tagFoundBigText
@@ -40,7 +40,7 @@ renderParameters.resourceLocations
     {
        metaURL: "notfake.id"
        , url:""
-       , description: "On discord under the username: notfake.id"
+       , description: "On Discord under the username: notfake.id"
     }
     ,{
        metaURL: "proof.am/#rsx"
