@@ -31,7 +31,6 @@ renderParameters.domains
     ["https", "proof.am"]
     ,["https", "notfake.id"]
     ,["https", "okokstop.com"]
-    ,["https", "zz.dog"]
 ];
 
 
@@ -39,7 +38,7 @@ renderParameters.resourceLocations
 =
 [
     {
-       metaURL: "zz.dog"
+       metaURL: "notfake.id/in"
        , url:"https://www.linkedin.com/in/zz22"
        ,nonclickable: false
        , description: "super serious professional networking"
