@@ -26,12 +26,12 @@ renderParameters.maindomains
 ];
 
 renderParameters.domains
-=
-[
+=[];
+/*[
     ["https", "proof.am"]
     ,["https", "notfake.id"]
     ,["https", "okokstop.com"]
-];
+];*/
 
 
 renderParameters.resourceLocations
