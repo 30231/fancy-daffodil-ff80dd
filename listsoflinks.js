@@ -41,7 +41,7 @@ renderParameters.resourceLocations
     {
        metaURL: "zz.dog"
        , url:"https://www.linkedin.com/in/zz22"
-       ,nonclickable: true
+       ,nonclickable: false
        , description: "super serious professional networking"
     }
     ,{
