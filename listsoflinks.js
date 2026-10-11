@@ -39,6 +39,12 @@ renderParameters.resourceLocations
 =
 [
     {
+       metaURL: "zz.dog"
+       , url:"https://www.linkedin.com/in/zz22"
+       ,nonclickable: true
+       , description: "super serious professional networking"
+    }
+    ,{
        metaURL: "notfake.id"
        , url:"On Discord under the username: notfake.id"
        ,nonclickable: true
