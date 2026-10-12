@@ -201,6 +201,7 @@ var belowarediv = createElementWithTag_Text_andAppendTo_("div", renderParameters
 
 // Metaurl is "domain" or "domain/#tag". A match is an exact domain and hashtag
 // pair. No hashtag on both sides is a match. The resource url is not compared.
+/*
 function parseMetaurl(metaurl)
 {
     var lower = String(metaurl).toLowerCase();
@@ -227,6 +228,34 @@ function parseMetaurl(metaurl)
 
     return { domain: domain.at(-1)=="/" ? domain.slice(0,-1) : domain, tag: tag, hasHash: hasHash };
 }
+*/
+function replaceClusters(str, alphabet, replacer) {
+  if (!alphabet) return str; // nothing to match
+
+  // Escape characters that are special inside a character class
+  const escaped = alphabet.replace(/[-\\\]^]/g, '\\$&');
+  const regex = new RegExp(`[${escaped}]+`, 'g');
+
+  // Use a function so the replacer is treated literally
+  // (avoids $&, $1, etc. being interpreted)
+  return str.replace(regex, () => replacer);
+}
+
+function parseMetaurl(metaurl)
+{
+    var lower = metaurl.toLowerCase(); 
+    lower = replaceClusters(lower, "/#", "/");
+    lower = lower.at(-1)=="/" ? lower.slice(0,-1) : lower;
+    var splitAt = lower.lastIndexOf("/");
+    if (splitAt >= 0) {
+        return [lower.slice(0, splitAt), lower.slice(splitAt + 1)];
+    }
+    else{
+        return [lower, ""];
+    }
+
+
+}
 
 function addressBar()
 {
@@ -248,9 +277,9 @@ for (var item of renderParameters.resourceLocations)
 {
     var parsed = parseMetaurl(item.metaURL);
     var entry = { metaurl: item.metaURL, resource: item, parsed: parsed };
-    if (parsed.domain === here.domain && parsed.tag === here.tag)
+    if (parsed[0] === here[0] && parsed[1] === here[1])
         matches.push(entry);
-    else if (parsed.domain === here.domain)
+    else if (parsed[0] === here[1])
         sameDomain.push(entry);
     else
         otherDomain.push(entry);
@@ -357,8 +386,8 @@ if(matchCount>0)
   }
    createElementWithTag_Text_andAppendTo_("div", renderParameters.goodbye, goodbye).id="theabove";
  var allDomains = renderParameters.maindomains.concat(renderParameters.domains);
- var currentDomains = allDomains.filter(e=>e[1].toLowerCase()===here.domain);
- var unMatchedDomains = allDomains.filter(e=>e[1].toLowerCase()!==here.domain);
+ var currentDomains = allDomains.filter(e=>e[1].toLowerCase()===here[0]);
+ var unMatchedDomains = allDomains.filter(e=>e[1].toLowerCase()!==here[0]);
   for (d of hideExtras ? (matchCount ? currentDomains : []) : currentDomains.concat(unMatchedDomains))
   {
     var div
