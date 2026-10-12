@@ -39,7 +39,7 @@ renderParameters.resourceLocations
 [
     {
        metaURL: "zzzzz.ooo#in"
-       , url:"https://www.linkedin.com/in/zzzzzoooin"
+       , url:"https://www.linkedin.com/in/zzzzzooo"
        ,nonclickable: false
        , description: "super serious professional networking"
     }
