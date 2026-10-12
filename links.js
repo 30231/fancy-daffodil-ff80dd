@@ -204,19 +204,35 @@ var belowarediv = createElementWithTag_Text_andAppendTo_("div", renderParameters
 function parseMetaurl(metaurl)
 {
     var lower = String(metaurl).toLowerCase();
-    var splitAt = lower.indexOf("/#");
-    if (splitAt < 0)
-        return { domain: lower, tag: "" };
-    return { domain: lower.slice(0, splitAt), tag: lower.slice(splitAt + 2) };
+    var splitAt = lower.indexOf("#");
+    var domain; 
+    var tag;
+    if (splitAt < 0) {
+        splitAt = lower.lastIndexOf("/");
+    }
+
+    if (splitAt >= 0) {
+        domain = lower.slice(0, splitAt);
+        tag = lower.slice(splitAt + 1);
+    }
+    else{
+        domain = lower;
+        tag = "";
+    }
+
+    return { domain: domain.at(-1)=="/" ? domain.slice(0,-1) : domain, tag: tag };
 }
 
 function addressBar()
 {
+    /*
     var hash = location.hash;
     var tag = "";
     if (hash && hash !== "#")
         tag = decodeURIComponent(hash.slice(1)).trim().toLowerCase();
     return { domain: location.hostname.toLowerCase(), tag: tag };
+    */
+    return parseMetaurl(location.href.slice(location.protocol.length + 2));
 }
 
 var here = addressBar();
