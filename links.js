@@ -207,8 +207,13 @@ function parseMetaurl(metaurl)
     var splitAt = lower.indexOf("#");
     var domain; 
     var tag;
+    var hasHash;
     if (splitAt < 0) {
         splitAt = lower.lastIndexOf("/");
+        hasHash = false;
+    }
+    else{
+        hasHash = "true";
     }
 
     if (splitAt >= 0) {
@@ -220,7 +225,7 @@ function parseMetaurl(metaurl)
         tag = "";
     }
 
-    return { domain: domain.at(-1)=="/" ? domain.slice(0,-1) : domain, tag: tag };
+    return { domain: domain.at(-1)=="/" ? domain.slice(0,-1) : domain, tag: tag, hasHash: hasHash };
 }
 
 function addressBar()
