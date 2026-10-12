@@ -26,20 +26,20 @@ renderParameters.maindomains
 ];
 
 renderParameters.domains
-=[];
-/*[
-    ["https", "proof.am"]
+=[
+    ["https", "zzzzz.ooo"]
+    ,["https", "proof.am"]
     ,["https", "notfake.id"]
     ,["https", "okokstop.com"]
-];*/
+];
 
 
 renderParameters.resourceLocations
 =
 [
     {
-       metaURL: "notfake.id/in"
-       , url:"https://www.linkedin.com/in/zz22"
+       metaURL: "zzzzz.ooo#in"
+       , url:"https://www.linkedin.com/in/zzzzzoooin"
        ,nonclickable: false
        , description: "super serious professional networking"
     }
@@ -50,28 +50,28 @@ renderParameters.resourceLocations
        , description: ""
     }
     ,{
-       metaURL: "proof.am/#rsx"
+       metaURL: "proof.am#rsx"
        , url:"https://x.com/rustysand7x"
        , description:"🐦"
     }
     ,{
-        metaURL: "proof.am/#30231"
+        metaURL: "proof.am#30231"
         , url:"https://github.com/30231"
         , description:"Amazing repositories coming soon..."
     }
     ,{
-       metaURL: "notfake.id/#resume"
+       metaURL: "notfake.id#resume"
        , url:""
        ,nonclickable: true
        , description:"Digital CV coming soon..."
     }
     ,{
-        metaURL: "proof.am/#rustysan"
+        metaURL: "proof.am#rustysan"
         , url:"mailto:rustysan@amazon.com"
         , description:"I'm the owner of this email address. I will send you a verification email from this address upon request."
     }
     ,{
-        metaURL: "proof.am/#gatech"
+        metaURL: "proof.am#gatech"
         , url:"mailto:easyproof@gatech.edu"
         , description:"If you send an email to this address, I will reply from jspinoza3@gatech.edu"
     }
