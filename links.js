@@ -85,10 +85,16 @@ a {
     overflow: hidden;
 }
 
-.resourcelinkwrappingspan{
-  border-style: outset;
+.resourcelinkwrapping{
+    border-style: outset;
     border-width: thick;
     padding: 4px;
+    width: fit-content;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow-wrap: break-word;
 }
 
 .description{
@@ -273,11 +279,11 @@ const resourceRenderer
       var div = document.createElement("div");
       resourcesdiv.appendChild(div);
       createElementWithTag_Text_andAppendTo_("p",metaurl,div).className="metaurl";
-      var span = document.createElement("span");
-      span.className = "resourcelinkwrappingspan";
+      var rlw = document.createElement("div");
+      rlw.className = "resourcelinkwrapping";
       if (resource.nonclickable)
       {
-        span.textContent = url;
+        rlw.textContent = url;
       }
       else
       {
@@ -285,9 +291,9 @@ const resourceRenderer
         a.href = url;
         a.innerText = url;
         a.className = "resourcelink";
-        span.appendChild(a);
+        rlw.appendChild(a);
       }
-      div.appendChild(span);
+      div.appendChild(rlw);
       div.className = Object.keys(this.rendered).length%2?"resourcelisting1":"resourcelisting0";
       if(highlight)
         div.classList.add("my-class");
